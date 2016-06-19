@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="UserMapper">
+
+	<select id="selectUserPaging" resultType="UserResult">
+		SELECT * FROM Users
+		<where>
+			<if test="whereCondition != null">${whereCondition}</if>
+		</where>
+		<if test="orderBy != null">
+			ORDER BY ${orderBy}
+		</if>
+	</select>
+	
+	<select id="selectUserById" resultType="UserResult">
+		SELECT * FROM Users WHERE id = #{id}
+	</select>
+	
+	<update id="updateUser">
+        UPDATE users
+        <set>
+            <if test="userName != null">user_name = #{userName},</if>
+            <if test="password != null">password = #{password},</if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteUser">
+        DELETE FROM users WHERE id = #{id}
+    </delete>
+
+    <insert id="insertUser">
+        INSERT INTO users (id, user_name, password, created_time)
+        VALUES (#{id}, #{userName}, #{password}, #{createdTime})
+    </insert>
+</mapper>
