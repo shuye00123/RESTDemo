@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.IdGenerator;
 
+import com.shuye.constant.Message;
 import com.shuye.framework.jdbc.ServiceException;
 import com.shuye.framework.jdbc.dao.DataAccessor;
 import com.shuye.framework.jdbc.paging.Paging;
@@ -52,9 +53,9 @@ public class UserService {
 	}
 	
 	@Transactional
-	public void createUser(String id, String username, String password){
+	public void createUser( String username, String password){
 		Map<String, Object> paramMap = new HashMap<>();
-		paramMap.put("id", id);
+		paramMap.put("id", ig.generateId());
 		paramMap.put("userName", username);
 		paramMap.put("password", password);
 		paramMap.put("createdTime", DateUtil.getCurrentDateTime());
