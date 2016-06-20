@@ -9,6 +9,7 @@ package com.shuye.result;
  */
 public class UserResult {
 
+	private String id;
 	private String username;
 	private String password;
 	private String createdTime;
@@ -29,5 +30,11 @@ public class UserResult {
 	}
 	public void setCreatedTime(String createdTime) {
 		this.createdTime = createdTime;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
 	}
 }

@@ -3,6 +3,7 @@ package com.shuye.bean;
 public class UserBean {
 
 	private String token;
+	private String username;
 	public String getToken() {
 		return token;
 	}
@@ -15,5 +16,5 @@ public class UserBean {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	private String username;
+	
 }

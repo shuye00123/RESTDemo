@@ -18,6 +18,10 @@
 		SELECT * FROM Users WHERE id = #{id}
 	</select>
 	
+	<select id="login" resultType="UserResult">
+		SELECT * FROM Users WHERE user_name = #{userName}
+	</select>
+	
 	<update id="updateUser">
         UPDATE users
         <set>
