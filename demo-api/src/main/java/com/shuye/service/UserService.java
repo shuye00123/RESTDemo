@@ -6,17 +6,22 @@ package com.shuye.service;
 import java.util.HashMap;
 import java.util.Map;
 
+
+
+
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.util.IdGenerator;
 
 import com.shuye.constant.Message;
-import com.shuye.framework.jdbc.ServiceException;
-import com.shuye.framework.jdbc.dao.DataAccessor;
-import com.shuye.framework.jdbc.paging.Paging;
-import com.shuye.framework.util.DateUtil;
 import com.shuye.result.UserResult;
+import com.xxx.api.jdbc.ServiceException;
+import com.xxx.api.jdbc.dao.DataAccessor;
+import com.xxx.api.jdbc.id.IdGenerator;
+import com.xxx.api.jdbc.paging.Paging;
+import com.xxx.api.util.DateUtil;
 
 /**
  * @author shuye

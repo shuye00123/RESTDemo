@@ -11,7 +11,7 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="configLocation" value="classpath:mybatis.xml"/>
         <property name="mapperLocations" value="classpath:com/shuye/api/mapper/*.xml"/>
-        <property name="typeAliasesPackage" value="com.shuye.api.result"/>
+        <property name="typeAliasesPackage" value="com.shuye.result"/>
     </bean>
 
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
@@ -24,10 +24,10 @@
 
     <tx:annotation-driven/>
 
-    <bean id="dataAccessor" class="com.shuye.framework.jdbc.dao.impl.DefaultDataAccessor">
+    <bean id="dataAccessor" class="com.xxx.api.jdbc.dao.impl.DefaultDataAccessor">
         <property name="sqlSession" ref="sqlSession"/>
     </bean>
 
-    <bean id="idGenerator" class="com.shuye.framework.jdbc.id.impl.DefaultIdGenerator"/>
+    <bean id="idGenerator" class="com.xxx.api.jdbc.id.impl.DefaultIdGenerator"/>
 
 </beans>

@@ -56,8 +56,8 @@
         <!-- API Framework -->
         <dependency>
             <groupId>com.shuye</groupId>
-            <artifactId>demo-framework</artifactId>
-            <version>1.0-SNAPSHOT</version>
+    		<artifactId>demo-framework</artifactId>
+    		<version>1.0.0</version>
         </dependency>
     </dependencies>
 

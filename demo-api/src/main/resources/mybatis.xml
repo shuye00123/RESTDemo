@@ -10,7 +10,7 @@
     </settings>
 
     <plugins>
-        <plugin interceptor="com.shuye.framework.jdbc.paging.MySQLPagingInterceptor">
+        <plugin interceptor="com.xxx.api.jdbc.paging.MySQLPagingInterceptor">
             <property name="paging" value="Paging"/>
         </plugin>
     </plugins>

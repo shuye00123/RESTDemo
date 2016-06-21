@@ -3,7 +3,9 @@
  */
 package com.shuye.param;
 
-import com.shuye.framework.validation.NotEmpty;
+import com.xxx.api.validation.NotEmpty;
+
+
 
 /**
  * @author shuye
@@ -12,14 +14,15 @@ import com.shuye.framework.validation.NotEmpty;
 public class UserParam {
 
 	@NotEmpty
-	private String username;
+	private String userName;
 	@NotEmpty
 	private String password;
-	public String getUsername() {
-		return username;
+	
+	public String getUserName() {
+		return userName;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 	public String getPassword() {
 		return password;
